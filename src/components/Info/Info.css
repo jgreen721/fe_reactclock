@@ -1,0 +1,142 @@
+.info-card {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40rem;
+  /* border: 3px dotted orange; */
+  transition: 0.5s ease;
+  padding: 7% 10%;
+  bottom: -5vh;
+  text-shadow: 0px 0px 0px white;
+}
+
+.info-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 65%;
+  background: gray;
+}
+
+.dark {
+  background: black;
+}
+
+.hide-card {
+  bottom: -100vh;
+}
+
+.info-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  position: relative;
+}
+
+.white-text {
+  color: white;
+}
+
+.partition {
+  height: 200px;
+  width: 0.25rem;
+  background: darkgray;
+  position: relative;
+}
+
+.info-item,
+.info-col {
+  text-align: start;
+  /* border: 3px dotted white; */
+}
+
+.ml-5 {
+  margin-left: 5rem;
+}
+
+.info-category {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.info-h1 {
+  font-size: 5.6rem;
+  /* line-height: 4.8rem; */
+}
+
+.test-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-size: 2.5rem;
+}
+
+.test-row::after {
+  content: "";
+  width: 2px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  left: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .info-card {
+    height: 44rem;
+  }
+
+  .info-category {
+    font-size: 1.3rem;
+    letter-spacing: 2.6px;
+  }
+
+  .info-item {
+    min-width: 20rem;
+  }
+
+  .info-h1 {
+    font-size: 4rem;
+    /* line-height: 4.8rem; */
+  }
+
+  .partition {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .info-card {
+    height: 25.6rem;
+    padding: 7% 5%;
+  }
+
+  .info-flex,
+  .info-col {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .info-category {
+    font-size: 1rem;
+  }
+
+  .info-h1 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+}

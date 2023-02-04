@@ -1,0 +1,20 @@
+.flex-parent-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* border: 3px dotted green; */
+  height: 100%;
+  width: 100%;
+}
+
+.top-row,
+.bottom-row {
+  height: 50%;
+  /* border: 3px dotted orange; */
+  transition: 0.3s ease;
+  /* display: flex; */
+}
+
+.rise {
+  transform: translateY(-100%);
+}

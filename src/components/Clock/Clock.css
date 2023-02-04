@@ -1,0 +1,46 @@
+.clock-card {
+  color: white;
+  text-shadow: 2px 3px 8px black;
+  text-align: start;
+}
+
+.greeting-h5,
+.location-h5 {
+  font-size: 1.8rem;
+  letter-spacing: 3.6px;
+  font-weight: 200;
+}
+
+.clock-h1 {
+  font-size: 20rem;
+}
+
+.dst {
+  font-size: 4.4rem;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 425px) {
+  .greeting-h5,
+  .location-h5,
+  .dst {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+
+  .clock-h1 {
+    font-size: 10rem;
+    letter-spacing: -2.5px;
+    line-height: 100px;
+  }
+
+  .dst {
+    font-weight: 200;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
