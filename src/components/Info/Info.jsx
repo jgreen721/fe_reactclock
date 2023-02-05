@@ -4,13 +4,14 @@ import "./Info.css"
 
 const Info = () => {
   const {showInfo,currData} = useAppContext()
+
   return currData ? (
     <div className={showInfo ? "info-card hide-card" : "info-card"}>
          {/* <div className="test-row">
         <h1 className="test-h1">Lorem, ipsum.</h1>
         <h1 className="test-h1">Lorem, ipsum.</h1>
       </div> */}
-              <div className={currData.nightOverlay ? "info-overlay dark" : "info-overlay dark"}></div>
+              <div className={currData.nightOverlay ? "info-overlay dark" : "info-overlay"}></div>
 
       <div className={currData.nightOverlay ? "info-flex white-text" : "info-flex"}>
         <div className="info-col">
