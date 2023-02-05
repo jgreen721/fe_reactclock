@@ -28,7 +28,8 @@ li {
   position: relative;
   /* padding: 5.6rem 16.5rem; */
   padding: 3% 10%;
-  height: 80rem;
+  /* height: 80rem; */
+  height: 100vh;
   overflow: hidden;
   font-family: var(--mainFont);
 }
@@ -42,12 +43,12 @@ li {
   .app {
     padding: 5% 5%;
 
-    height: 102.4rem;
+    /* height: 102.4rem; */
   }
 }
 
 @media screen and (max-width: 375px) {
   .app {
-    height: 66.7rem;
+    /* height: 66.7rem; */
   }
 }

@@ -46,7 +46,8 @@ export const AppProvider = ({ children }) => {
 
   const fetchQuote=async()=>{
     try{
-      let res = await fetch(`${quotesUrl}/random`);
+      // let res = await fetch(`${quotesUrl}/random`);
+      let res = await fetch('http://localhost:4455/gettime')
       let data = await res.json()
       console.log("your quote",data)
        setQuote({
@@ -61,11 +62,11 @@ export const AppProvider = ({ children }) => {
 
   const fetchIp=async()=>{
     try{
-      // let res = await fetch(`${ipUrl}`);
-      // let data = await res.json()
-      // console.log("your ip",data)
-      // if(data.timezone){
-      let response = await fetch(`${timeUrl}/America/Los_Angeles`)
+      let res = await fetch(`${ipUrl}`);
+      let data = await res.json()
+      console.log("your ip",data)
+      if(data.timezone){
+      let response = await fetch(`${timeUrl}/${data.timezone}`)
       let timeData = await response.json();
       console.log(timeData)
       let cleanTime = getCleanTime(new Date(timeData.datetime).toLocaleTimeString())
@@ -81,10 +82,10 @@ export const AppProvider = ({ children }) => {
         nightOverlay:imgStatus == "morning" ? false : true
       })
       setCurrBg(images[imgStatus == "morning" ? 0 : 1])
-      // }
-      // else{
-      //   throw("Error in the fetchingTime block")
-      // }
+      }
+      else{
+        throw("Error in the fetchingTime block")
+      }
     }
     catch(err){
       console.log("error in fetching ip or time data.",err);
@@ -94,7 +95,7 @@ export const AppProvider = ({ children }) => {
 
   useEffect(()=>{
     fetchQuote();
-    fetchIp();
+    // fetchIp();
 
   },[])
 
